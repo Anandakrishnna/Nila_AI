@@ -6,6 +6,7 @@ interface AuthContextValue {
   user: User | null
   isLoading: boolean
   isConfigured: boolean
+  signOut: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined)
@@ -19,9 +20,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     let isMounted = true
 
-    void supabase.auth.getSession().then(({ data }) => {
+    void supabase.auth.getSession().then(({ data, error }) => {
       if (isMounted) {
+        if (error) setUser(null)
         setUser(data.session?.user ?? null)
+        setIsLoading(false)
+      }
+    }).catch(() => {
+      if (isMounted) {
+        setUser(null)
         setIsLoading(false)
       }
     })
@@ -37,7 +44,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const value = useMemo(() => ({ user, isLoading, isConfigured: isSupabaseConfigured }), [user, isLoading])
+  async function signOut() {
+    if (!supabase) return
+    const { error } = await supabase.auth.signOut()
+    if (error) throw error
+    setUser(null)
+  }
+
+  const value = useMemo(() => ({ user, isLoading, isConfigured: isSupabaseConfigured, signOut }), [user, isLoading])
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
