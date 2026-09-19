@@ -4,13 +4,13 @@ import type { ButtonHTMLAttributes } from 'react'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6078b5] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'bg-violet-500 text-white shadow-[0_10px_24px_rgba(124,92,255,0.28)] hover:-translate-y-0.5 hover:bg-violet-400',
-        dark: 'bg-slate-950 text-white shadow-lg hover:-translate-y-0.5 hover:bg-slate-800',
-        outline: 'border border-slate-200 bg-white text-slate-800 shadow-sm hover:border-violet-200 hover:bg-violet-50',
+        default: 'bg-[#5268a5] text-white shadow-sm hover:bg-[#445b96]',
+        dark: 'bg-slate-900 text-white shadow-sm hover:bg-slate-800',
+        outline: 'border border-slate-200 bg-white text-slate-700 shadow-sm hover:border-slate-300 hover:bg-slate-50',
         ghost: 'text-slate-600 hover:bg-slate-100 hover:text-slate-950',
       },
       size: {

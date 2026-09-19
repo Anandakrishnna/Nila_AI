@@ -8,7 +8,7 @@ import { AuthProvider } from '@/providers/auth-provider'
 import { RequireAuth } from '@/routes/require-auth'
 
 function NotFoundPage() {
-  return <DashboardShell><ErrorState title="That page isn’t here" description="The page you were looking for may have moved." action={<a className="text-sm font-medium text-violet-600 hover:text-violet-700" href="/">Back to Nila</a>} /></DashboardShell>
+  return <DashboardShell><ErrorState title="That page isn’t here" description="The page you were looking for may have moved." action={<a className="text-sm font-medium text-[#5268a5] hover:text-[#415582]" href="/">Back to Nila</a>} /></DashboardShell>
 }
 
 export function App() {

@@ -6,21 +6,21 @@
 
 :root {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  color: #111827;
-  background: #f8fafc;
+  color: #172033;
+  background: #fbfbfc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
 
 * { box-sizing: border-box; }
 
-html { min-width: 320px; background: #f8fafc; }
+html { min-width: 320px; background: #fbfbfc; }
 
 body { min-width: 320px; min-height: 100vh; margin: 0; }
 
 button, input { font: inherit; }
 
-::selection { background: #ddd6fe; color: #312e81; }
+::selection { background: #dfe6f5; color: #314674; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
