@@ -1,0 +1,5 @@
+[functions.initiate-call]
+verify_jwt = true
+
+[functions.twilio-media-stream]
+verify_jwt = false

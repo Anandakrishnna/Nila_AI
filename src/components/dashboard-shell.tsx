@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { useAuth } from '@/providers/auth-provider'
 
-const navigation = [{ label: 'Home', to: '/dashboard' }]
+const navigation = [{ label: 'Home', to: '/dashboard' }, { label: 'Voice check-in', to: '/voice-test' }]
 
 export function DashboardShell({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false)
