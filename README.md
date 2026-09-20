@@ -34,6 +34,10 @@ Distance often means missing the small things: a neighbour visit, a change in sl
 
 Only completed conversations are summarized. Nila never creates a summary for an interrupted or empty check-in.
 
+## Demo materials
+
+[Open the Nila hackathon demo folder on Google Drive](https://drive.google.com/drive/folders/15aSrGRFm19oGgyOBv2Q34kMRzYGcA3LN?usp=sharing)
+
 ## Product principles
 
 - **Grounded:** summaries, observations, and follow-ups originate only from what was actually shared.
