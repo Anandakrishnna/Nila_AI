@@ -159,6 +159,10 @@ The browser Voice Check-in is the supported live demo path. Phone calling depend
 
 ![Nila landing page](docs/screenshots/nila-landing.png)
 
+### Parent overview
+
+![Nila parent overview](docs/screenshots/nila-parent-overview.png)
+
 Dashboard captures should be taken only after a completed, real check-in is available. Do not use empty, failed, or fabricated dashboard records as product evidence.
 
 Recommended captures:
